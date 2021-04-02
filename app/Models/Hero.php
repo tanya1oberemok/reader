@@ -16,5 +16,9 @@ class Hero extends Model
         'phrase_id',
         'logo',
     ];
+
+    public function phrases() {
+        return $this->belongsTo(Phrase::class, 'phrase_id');
+    }
 }
 

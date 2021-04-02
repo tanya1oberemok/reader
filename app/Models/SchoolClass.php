@@ -19,5 +19,9 @@ class SchoolClass extends Model
         'school_id',
         'teacher_id',
     ];
+
+    public function users() {
+        return $this->hasMany(User::class);
+    }
 }
 
